@@ -330,4 +330,54 @@ function scrollToContact(e) {
 }
 document.querySelectorAll('.scroll-to-contact').forEach(el => {
     el.addEventListener('click', scrollToContact);
+});
+
+// Product Modal Functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const productModal = document.getElementById('productModal');
+    const productModalImage = document.getElementById('productModalImage');
+    const productModalClose = document.getElementById('productModalClose');
+    const productCards = document.querySelectorAll('.product-card');
+
+    // Open modal when clicking on product card
+    productCards.forEach(card => {
+        card.addEventListener('click', function(e) {
+            // Don't open modal if clicking on the button inside card
+            if (e.target.closest('.scroll-to-contact')) {
+                return;
+            }
+            
+            const productImage = this.querySelector('.product-image img');
+            if (productImage) {
+                productModalImage.src = productImage.src;
+                productModalImage.alt = productImage.alt;
+                productModal.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+        });
+    });
+
+    // Close modal when clicking close button
+    productModalClose.addEventListener('click', function() {
+        closeProductModal();
+    });
+
+    // Close modal when clicking outside
+    productModal.addEventListener('click', function(e) {
+        if (e.target === productModal) {
+            closeProductModal();
+        }
+    });
+
+    // Close modal with Escape key
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && productModal.classList.contains('active')) {
+            closeProductModal();
+        }
+    });
+
+    function closeProductModal() {
+        productModal.classList.remove('active');
+        document.body.style.overflow = 'auto';
+    }
 }); 
