@@ -96,8 +96,9 @@ body {
 
 .btn-primary:hover {
     background: #ff4444;
-    transform: translateY(-2px);
+    transform: translateY(-2px) translateZ(0);
     box-shadow: 0 10px 30px rgba(255, 68, 68, 0.4);
+    will-change: transform;
 }
 
 .btn-secondary {
@@ -109,6 +110,7 @@ body {
 .btn-secondary:hover {
     border-color: #ff4444;
     color: #ff4444;
+    will-change: border-color, color;
 }
 
 /* Header */
@@ -243,11 +245,14 @@ body {
     color: #ff4444;
     text-transform: uppercase;
     letter-spacing: 2px;
+    will-change: transform;
+    transform: translateZ(0);
+    backface-visibility: hidden;
 }
 
 @keyframes scroll {
-    0% { transform: translateX(100%); }
-    100% { transform: translateX(-100%); }
+    0% { transform: translateX(100%) translateZ(0); }
+    100% { transform: translateX(-100%) translateZ(0); }
 }
 
 /* Sections */
@@ -366,11 +371,13 @@ body {
     overflow: hidden;
     border: 1px solid #333333;
     box-shadow: 0 10px 40px rgba(255, 68, 68, 0.2);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    will-change: transform, box-shadow, border-color;
+    transform: translateZ(0);
 }
 
 .product-card:hover {
-    transform: translateY(-10px);
+    transform: translateY(-10px) translateZ(0);
     box-shadow: 0 30px 80px rgba(255, 68, 68, 0.4);
     border-color: #ff4444;
 }
@@ -453,13 +460,15 @@ body {
     padding: 40px;
     border-radius: 20px;
     text-align: center;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, border-color 0.3s ease;
     border: 1px solid #333333;
     cursor: pointer;
+    will-change: transform, border-color;
+    transform: translateZ(0);
 }
 
 .feature:hover {
-    transform: translateY(-5px);
+    transform: translateY(-5px) translateZ(0);
     border-color: #ff4444;
 }
 
@@ -637,6 +646,10 @@ body {
     .hero {
         padding: 100px 20px 0 20px;
     }
+
+    .hero-image img {
+        max-width: 250px;
+    }
     
     .hero-content {
         grid-template-columns: 1fr;
@@ -726,6 +739,22 @@ body {
 /* Smooth scrolling */
 html {
     scroll-behavior: smooth;
+}
+
+/* Respect user's motion preferences */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+    
+    .scroll-text {
+        animation: none;
+    }
 }
 
 /* Loading animation */
