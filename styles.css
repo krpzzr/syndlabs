@@ -662,6 +662,10 @@ body {
         padding: 100px 20px 0 20px;
     }
 
+    .hero-content {
+        margin-bottom: 0;
+    }
+
     .hero-image img {
         max-width: 250px;
     }
@@ -674,6 +678,7 @@ body {
     
     .hero-title {
         font-size: 2rem;
+        margin-top: 50px;
     }
     
     .about-content {
