@@ -156,7 +156,7 @@ body {
 
 /* Hero Section */
 .hero {
-    min-height: 100vh;
+    min-height: calc(100vh - 150px);
     display: flex;
     flex-direction: column;
     justify-content: center;
