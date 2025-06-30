@@ -408,14 +408,22 @@ body {
 }
 
 .product-image {
-    height: 350px;
+    height: 450px;
     overflow: hidden;
+    background-size: cover;
+    background-image: url(images/v2.jpg);
+    background-position: center top;
+}
+
+.product-card:nth-child(2) .product-image {
+    background-image: url(images/mad.jpg);
 }
 
 .product-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    display: none;
 }
 
 .product-info {
