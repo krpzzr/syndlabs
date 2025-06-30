@@ -223,6 +223,11 @@ body {
     gap: 20px;
 }
 
+
+.hero-buttons a {
+    line-height: 2;
+}
+
 .hero-image {
     display: flex;
     justify-content: center;
@@ -731,7 +736,7 @@ body {
         flex-direction: column;
         align-items: center;
     }
-    
+
     .age-buttons {
         flex-direction: column;
     }
