@@ -380,4 +380,55 @@ document.addEventListener('DOMContentLoaded', function() {
         productModal.classList.remove('active');
         document.body.style.overflow = 'auto';
     }
-}); 
+});
+
+// Infinite Scroll Text Functionality
+function setScrollTextAnimation() {
+    const scrollText = document.getElementById('scrollText');
+    if (!scrollText) return;
+
+    // Оригинальный текст
+    const originalText = scrollText.getAttribute('data-original') || scrollText.textContent.trim();
+
+    // Дублируем текст столько раз, чтобы ширина была не меньше 10 экранов
+    scrollText.textContent = originalText;
+    const screenWidth = window.innerWidth;
+    const textWidth = scrollText.offsetWidth;
+    let repeatCount = Math.ceil((screenWidth * 10) / textWidth);
+
+    let repeated = '';
+    for (let i = 0; i < repeatCount; i++) {
+        repeated += originalText + '   ';
+    }
+    scrollText.textContent = repeated;
+
+    // Получаем итоговую ширину
+    const fullWidth = scrollText.offsetWidth;
+
+    // Сброс transform
+    scrollText.style.transform = 'translateX(0)';
+    scrollText.style.animation = 'none';
+
+    // JS-анимация
+    let start = null;
+    let duration = 60000; // 60 секунд на полный цикл
+    function animateScroll(ts) {
+        if (!start) start = ts;
+        let elapsed = (ts - start) % duration;
+        let progress = elapsed / duration;
+        let translateX = -fullWidth * progress;
+        scrollText.style.transform = `translateX(${translateX}px)`;
+        requestAnimationFrame(animateScroll);
+    }
+    requestAnimationFrame(animateScroll);
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    const scrollText = document.getElementById('scrollText');
+    if (scrollText) {
+        scrollText.setAttribute('data-original', scrollText.textContent.trim());
+    }
+    setScrollTextAnimation();
+});
+window.addEventListener('resize', setScrollTextAnimation);
+window.addEventListener('load', setScrollTextAnimation);

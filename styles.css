@@ -230,38 +230,47 @@ body {
 }
 
 .hero-image img {
-    max-width: 400px;
+    max-width: 330px;
     width: 100%;
     height: auto;
     border-radius: 20px;
 }
 
 .hero-scroll {
+    width: 100%;
     overflow: hidden;
-    background: #111111;
+    background: #111;
+    min-height: 48px;
+    display: flex;
+    align-items: center;
     padding: 30px 0;
     margin-top: 60px;
     border-top: 1px solid #333333;
-    width: 100%;
-}
-
-.scroll-text {
+  }
+  .scroll-text {
+    display: inline-block;
     white-space: nowrap;
-    animation: scroll 20s linear infinite;
     font-size: 1.2rem;
     font-weight: 600;
     color: #ff4444;
     text-transform: uppercase;
     letter-spacing: 2px;
-    will-change: transform;
-    transform: translateZ(0);
-    backface-visibility: hidden;
     font-family: 'DrukWideBold', Arial, sans-serif;
+    will-change: transform;
+  }
+
+.desktop-scroll {
+    display: block;
+}
+
+.mobile-scroll {
+    display: none;
+    animation: scroll 8s linear infinite;
 }
 
 @keyframes scroll {
-    0% { transform: translateX(100%) translateZ(0); }
-    100% { transform: translateX(-100%) translateZ(0); }
+    0% { transform: translateX(0) translateZ(0); }
+    100% { transform: translateX(-10%) translateZ(0); }
 }
 
 /* Sections */
@@ -282,7 +291,7 @@ body {
 
 /* About Section */
 .about {
-    padding: 120px 0;
+    padding: 80px 0;
     background: #111111;
     position: relative;
     overflow: hidden;
@@ -347,7 +356,7 @@ body {
 
 /* Products Section */
 .products {
-    padding: 120px 0;
+    padding: 80px 0;
     background: #000000;
     position: relative;
     overflow: hidden;
@@ -440,7 +449,7 @@ body {
 
 /* Wholesale Section */
 .wholesale {
-    padding: 120px 0;
+    padding: 80px 0;
     background: #111111;
     position: relative;
     overflow: hidden;
@@ -503,7 +512,7 @@ body {
 
 /* Contact Section */
 .contact {
-    padding: 120px 0;
+    padding: 80px 0;
     background: #000000;
     position: relative;
     overflow: hidden;
@@ -575,7 +584,7 @@ body {
 }
 
 .contact-image img {
-    max-width: 400px;
+    max-width: 330px;
     width: 100%;
     height: auto;
     border-radius: 20px;
@@ -729,6 +738,19 @@ body {
     
     .about, .products, .wholesale, .contact {
         padding: 80px 0;
+    }
+
+    /* Faster scroll animation on mobile */
+    .scroll-text {
+        animation: scroll 4s linear infinite;
+    }
+
+    .desktop-scroll {
+        display: none;
+    }
+
+    .mobile-scroll {
+        display: block;
     }
 }
 
