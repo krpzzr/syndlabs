@@ -15,12 +15,12 @@ body {
 
 /* Text Selection Styles */
 ::selection {
-    background-color: #ff4444;
+    background-color: #6ad109;
     color: #ffffff;
 }
 
 ::-moz-selection {
-    background-color: #ff4444;
+    background-color: #6ad109;
     color: #ffffff;
 }
 
@@ -52,13 +52,13 @@ body {
     max-width: 500px;
     margin: 20px;
     border: 1px solid #333333;
-    box-shadow: 0 20px 60px rgba(255, 68, 68, 0.2);
+    box-shadow: 0 20px 60px rgba(106, 209, 9, 0.2);
 }
 
 .age-modal-content h2 {
     font-size: 3rem;
     margin-bottom: 30px;
-    color: #ff4444;
+    color: #6ad109;
     font-weight: 900;
 }
 
@@ -92,14 +92,14 @@ body {
 }
 
 .btn-primary {
-    background: #ff4444;
+    background: #6ad109;
     color: #ffffff;
 }
 
 .btn-primary:hover {
-    background: #ff4444;
+    background: #6ad109;
     transform: translateY(-2px) translateZ(0);
-    box-shadow: 0 10px 30px rgba(255, 68, 68, 0.4);
+    box-shadow: 0 10px 30px rgba(106, 209, 9, 0.4);
     will-change: transform;
 }
 
@@ -110,8 +110,8 @@ body {
 }
 
 .btn-secondary:hover {
-    border-color: #ff4444;
-    color: #ff4444;
+    border-color: #6ad109;
+    color: #6ad109;
     will-change: border-color, color;
 }
 
@@ -158,7 +158,7 @@ body {
 }
 
 .nav-link:hover {
-    color: #ff4444;
+    color: #6ad109;
 }
 
 /* Hero Section */
@@ -203,7 +203,7 @@ body {
     font-size: 4.5rem;
     font-weight: 900;
     margin-bottom: 30px;
-    color: #ff4444;
+    color: #6ad109;
     text-transform: uppercase;
     letter-spacing: 2px;
     line-height: 1.1;
@@ -257,7 +257,7 @@ body {
     white-space: nowrap;
     font-size: 1.2rem;
     font-weight: 600;
-    color: #ff4444;
+    color: #6ad109;
     text-transform: uppercase;
     letter-spacing: 2px;
     font-family: 'DrukWideBold', Arial, sans-serif;
@@ -288,7 +288,7 @@ body {
     font-size: 3.5rem;
     font-weight: 900;
     margin-bottom: 20px;
-    color: #ff4444;
+    color: #6ad109;
     text-transform: uppercase;
     letter-spacing: 2px;
     font-family: 'DrukWideBold', Arial, sans-serif;
@@ -340,7 +340,7 @@ body {
 
 .about-list li:before {
     content: "•";
-    color: #ff4444;
+    color: #6ad109;
     font-size: 2rem;
     position: absolute;
     left: 0;
@@ -394,7 +394,7 @@ body {
     border-radius: 20px;
     overflow: hidden;
     border: 1px solid #333333;
-    box-shadow: 0 10px 40px rgba(255, 68, 68, 0.2);
+    box-shadow: 0 10px 40px rgba(106, 209, 9, 0.2);
     transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
     will-change: transform, box-shadow, border-color;
     transform: translateZ(0);
@@ -403,8 +403,8 @@ body {
 
 .product-card:hover {
     transform: translateY(-10px) translateZ(0);
-    box-shadow: 0 30px 80px rgba(255, 68, 68, 0.4);
-    border-color: #ff4444;
+    box-shadow: 0 30px 80px rgba(106, 209, 9, 0.4);
+    border-color: #6ad109;
 }
 
 .product-image {
@@ -434,7 +434,7 @@ body {
     font-size: 2rem;
     font-weight: 700;
     margin-bottom: 15px;
-    color: #ff4444;
+    color: #6ad109;
     text-transform: uppercase;
     letter-spacing: 1px;
     font-family: 'DrukWideBold', Arial, sans-serif;
@@ -504,14 +504,14 @@ body {
 
 .feature:hover {
     transform: translateY(-5px) translateZ(0);
-    border-color: #ff4444;
+    border-color: #6ad109;
 }
 
 .feature h4 {
     font-size: 1.5rem;
     font-weight: 800;
     margin-bottom: 15px;
-    color: #ff4444;
+    color: #6ad109;
     text-transform: uppercase;
     letter-spacing: 1px;
     font-family: 'DrukWideBold', Arial, sans-serif;
@@ -582,7 +582,7 @@ body {
 .form-group input:focus,
 .form-group textarea:focus {
     outline: none;
-    border-color: #ff4444;
+    border-color: #6ad109;
     background: #000000;
 }
 
@@ -641,7 +641,7 @@ body {
 }
 
 .footer-links a:hover {
-    color: #ff4444;
+    color: #6ad109;
 }
 
 .footer-bottom {
@@ -841,7 +841,7 @@ html {
     width: 28px;
     height: 4px;
     margin: 4px 0;
-    background: #ff4444;
+    background: #6ad109;
     border-radius: 2px;
     transition: all 0.3s;
 }
@@ -895,7 +895,7 @@ html {
     font-family: 'DrukWideBold', Arial, sans-serif;
 }
 .mobile-menu-content .nav-link:hover {
-    color: #ff4444;
+    color: #6ad109;
 }
 .mobile-menu-close {
     position: absolute;
@@ -910,7 +910,7 @@ html {
     transition: color 0.2s;
 }
 .mobile-menu-close:hover {
-    color: #ff4444;
+    color: #6ad109;
 }
 @media (max-width: 900px) {
     .nav-container {
@@ -1003,7 +1003,7 @@ html {
 }
 
 .product-modal-close:hover {
-    color: #ff4444;
+    color: #6ad109;
 }
 
 /* Make product cards clickable */
@@ -1012,9 +1012,18 @@ html {
     border-radius: 20px;
     overflow: hidden;
     border: 1px solid #333333;
-    box-shadow: 0 10px 40px rgba(255, 68, 68, 0.2);
+    box-shadow: 0 10px 40px rgba(106, 209, 9, 0.2);
     transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
     will-change: transform, box-shadow, border-color;
     transform: translateZ(0);
     cursor: pointer;
+}
+
+.feature:hover,
+.scroll-to-contact:hover {
+    border-color: #6ad109 !important;
+    color: #6ad109 !important;
+    background: rgba(106, 209, 9, 0.08) !important;
+    box-shadow: 0 0 0 2px #6ad10922;
+    transition: all 0.3s;
 } 
