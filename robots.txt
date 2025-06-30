@@ -1,0 +1,14 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://syndlabs.ru/sitemap.xml
+
+# Disallow age verification modal from indexing
+Disallow: /#ageModal
+
+# Allow all content
+Allow: /images/
+Allow: /fonts/
+Allow: /styles.css
+Allow: /script.js 

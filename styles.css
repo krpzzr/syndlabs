@@ -905,6 +905,9 @@ html {
     color: #ff4444;
 }
 @media (max-width: 900px) {
+    .nav-container {
+        justify-content: flex-end;
+    }
     .nav-menu {
         display: none;
     }
