@@ -129,7 +129,7 @@ body {
 
 .nav-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
     padding: 20px 40px;
     max-width: 1200px;
@@ -677,6 +677,8 @@ body {
     
     .nav-container {
         padding: 20px;
+        padding-top: 10px;
+        padding-bottom: 10px;
     }
     
     .hero {
@@ -898,7 +900,7 @@ html {
 }
 .mobile-menu-close {
     position: absolute;
-    top: 30px;
+    top: 20px;
     right: 30px;
     background: none;
     border: none;
